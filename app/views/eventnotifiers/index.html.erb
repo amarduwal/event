@@ -1,0 +1,51 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Eventnotifiers</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Event name</th>
+      <th>Event subject</th>
+      <th>Event company</th>
+      <th>Event start</th>
+      <th>Event end</th>
+      <th>Event duration</th>
+      <th>Event venue</th>
+      <th>Event for</th>
+      <th>Event chairman</th>
+      <th>Event image</th>
+      <th>Event</th>
+      <th>Description</th>
+      <th>Event sponser</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @eventnotifiers.each do |eventnotifier| %>
+      <tr>
+        <td><%= eventnotifier.event_name %></td>
+        <td><%= eventnotifier.event_subject %></td>
+        <td><%= eventnotifier.event_company %></td>
+        <td><%= eventnotifier.event_start %></td>
+        <td><%= eventnotifier.event_end %></td>
+        <td><%= eventnotifier.event_duration %></td>
+        <td><%= eventnotifier.event_venue %></td>
+        <td><%= eventnotifier.event_for %></td>
+        <td><%= eventnotifier.event_chairman %></td>
+        <td><%= eventnotifier.event_image %></td>
+        <td><%= eventnotifier.event %></td>
+        <td><%= eventnotifier.description %></td>
+        <td><%= eventnotifier.event_sponser %></td>
+        <td><%= link_to 'Show', eventnotifier %></td>
+        <td><%= link_to 'Edit', edit_eventnotifier_path(eventnotifier) %></td>
+        <td><%= link_to 'Destroy', eventnotifier, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Eventnotifier', new_eventnotifier_path %>
